@@ -13,6 +13,7 @@ div img {
     max-width: 992px;
     margin: auto;
     width: 100%;
+    min-width: 320px;
 }
 
 .cabecalho {
@@ -45,13 +46,9 @@ div img {
 }
 
 .apresentacao {
-    height: 100vh;
+    height: calc(100vh - 100px);
     align-items: center;
     justify-content: space-between;
-}
-
-.texto-apresentacao {
-    min-height: 200px;
 }
 
 .texto-apresentacao h2 {
@@ -100,9 +97,6 @@ div img {
 .quem-somos p {
     margin-bottom: 30px;
     width: 90%;
-}
-
-.quem-somos img {
 }
 
 .quem-somos__texto {
@@ -160,6 +154,7 @@ div img {
 
 .planos-content h2{
     font-size: 48px;
+    margin-bottom: 100px;
 }
 
 .lista-planos {
@@ -219,4 +214,53 @@ div img {
 
 .rodape-content {
     justify-content: space-between;
+}
+
+/* mobile */
+
+@media(max-width: 992px) {
+    .flex-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .apresentacao{
+        flex-direction: column;
+    }
+
+    .quem-somos{
+        flex-direction: column-reverse;
+    }
+
+    .quem-somos img{
+        min-width: 320px;
+        margin: auto;
+    }
+
+    .lista-servicos{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .item-servico{
+        margin: 30px auto;
+    }
+
+    .item-servico img{
+        width: 50%;
+        margin: auto;
+    }
+
+    .lista-planos{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .plano{
+        max-width: 90%;
+        margin: 20px auto;
+    }
 }
